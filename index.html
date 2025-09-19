@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>ECHO - Empowering Change through Hope and Optimism | Student Initiative</title>
+    <meta name="description"
+        content="ECHO is a student-driven initiative fostering awareness, positivity, and action in communities. Join us in spreading optimism and driving meaningful change through our projects and initiatives.">
+    <meta name="keywords"
+        content="student initiative, community outreach, mental health awareness, environmental conservation, optimism, hope, youth empowerment, social change">
+    <meta name="author" content="ECHO Initiative Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://echoclub.org">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ECHO - Empowering Change through Hope and Optimism">
+    <meta property="og:description"
+        content="A student-driven initiative fostering awareness, positivity, and action in our community. Join us in creating meaningful change.">
+    <meta property="og:image" content="https://echoclub.org/assets/echo-og-image.jpg">
+    <meta property="og:url" content="https://echoclub.org">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ECHO Initiative">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ECHO - Empowering Change through Hope and Optimism">
+    <meta name="twitter:description"
+        content="A student-driven initiative fostering awareness, positivity, and action in our community.">
+    <meta name="twitter:image" content="https://echoclub.org/assets/echo-twitter-card.jpg">
+    <meta name="twitter:site" content="@echo_initiative">
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ECHO Initiative",
+        "description": "A student-driven initiative fostering awareness, positivity, and action in communities",
+        "url": "https://echoclub.org",
+        "logo": "https://echoclub.org/assets/echo-logo.png",
+        "foundingDate": "2023",
+        "founder": [
+            {
+                "@type": "Person",
+                "name": "Sarah Johnson"
+            }
+        ],
+        "sameAs": [
+            "https://instagram.com/echo_initiative",
+            "https://linkedin.com/company/echo-initiative"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@echoclub.org",
+            "contactType": "General Inquiry"
+        }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Premium Hero Background */
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #0ea5e9 50%, #06b6d4 75%, #14b8a6 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Floating Particles Animation */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .particle:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .particle:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .particle:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        .particle:nth-child(4) {
+            animation-delay: 3s;
+        }
+
+        .particle:nth-child(5) {
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            33% {
+                transform: translateY(-20px) rotate(120deg);
+            }
+
+            66% {
+                transform: translateY(10px) rotate(240deg);
+            }
+        }
+
+        /* Echo Waves Animation */
+        .echo-waves {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .wave {
+            position: absolute;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: wave 4s linear infinite;
+        }
+
+        .wave:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .wave:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .wave:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        .wave:nth-child(4) {
+            animation-delay: 3s;
+        }
+
+        @keyframes wave {
+            0% {
+                width: 20px;
+                height: 20px;
+                opacity: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            100% {
+                width: 800px;
+                height: 800px;
+                opacity: 0;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        /* Glassmorphism CTA Buttons */
+        .glass-button {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .glass-button:hover::before {
+            left: 100%;
+        }
+
+        .glass-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Pulsing Logo */
+        .logo-pulse {
+            animation: pulse 2s ease-in-out infinite;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Scroll Effects */
+        .parallax-element {
+            transition: transform 0.1s ease-out;
+        }
+
+        /* Fade in animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .neon-glow:hover {
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+            text-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+        }
+
+        .ripple {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+        }
+
+        .ripple:active::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Founder's Voice Section Styles */
+        .founder-quote {
+            position: relative;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .quote-mark {
+            font-size: 4rem;
+            color: #e2e8f0;
+            position: absolute;
+            line-height: 1;
+        }
+
+        .quote-mark.left {
+            top: -10px;
+            left: 10px;
+        }
+
+        .quote-mark.right {
+            bottom: -30px;
+            right: 10px;
+            transform: rotate(180deg);
+        }
+
+        /* Animation delays */
+        .animation-delay-200 {
+            animation-delay: 200ms;
+        }
+
+        .animation-delay-300 {
+            animation-delay: 300ms;
+        }
+
+        .animation-delay-400 {
+            animation-delay: 400ms;
+        }
+
+        .animation-delay-500 {
+            animation-delay: 500ms;
+        }
+
+        .animation-delay-600 {
+            animation-delay: 600ms;
+        }
+
+        .animation-delay-700 {
+            animation-delay: 700ms;
+        }
+
+        .animation-delay-1000 {
+            animation-delay: 1000ms;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2000ms;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">ECHO</span>
+                    </div>
+                    <span class="font-semibold text-gray-800">ECHO</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-500 transition-colors">About</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-500 transition-colors">Projects</a>
+                    <a href="#members" class="text-gray-600 hover:text-blue-500 transition-colors">Team</a>
+                    <a href="blogs.html" target="_blank"
+                        class="text-gray-600 hover:text-blue-500 transition-colors">Blogs</a>
+                    <a href="#connect" class="text-gray-600 hover:text-blue-500 transition-colors">Connect</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section
+        class="hero-gradient min-h-screen flex flex-col items-center justify-center text-white px-4 py-20 relative overflow-hidden">
+        <!-- Echo Waves Animation -->
+        <div class="echo-waves">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+
+        <!-- Floating Particles -->
+        <div class="particle w-4 h-4 bg-white" style="top: 20%; left: 10%;"></div>
+        <div class="particle w-6 h-6 bg-cyan-200" style="top: 60%; left: 80%;"></div>
+        <div class="particle w-3 h-3 bg-blue-200" style="top: 30%; right: 20%;"></div>
+        <div class="particle w-5 h-5 bg-white" style="bottom: 40%; left: 70%;"></div>
+        <div class="particle w-4 h-4 bg-cyan-300" style="top: 70%; left: 30%;"></div>
+
+        <!-- Pulsing Logo -->
+        <div class="mb-8 fade-in">
+            <div class="w-40 h-40 bg-white rounded-full flex items-center justify-center shadow-2xl mx-auto logo-pulse">
+                <img src="logo.png" alt="ECHO Logo" class="w-32 h-32 object-contain" />
+            </div>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-center mb-6 fade-in parallax-element">Empowering Change through
+            Hope and Optimism</h1>
+        <p class="text-xl md:text-2xl text-center max-w-3xl mb-12 opacity-90 fade-in animation-delay-300">A
+            student-driven initiative fostering awareness, positivity, and action in our community.</p>
+
+        <!-- Premium Glassmorphism CTA buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8 fade-in animation-delay-500">
+            <a href="#projects"
+                class="glass-button ripple px-8 py-4 rounded-full font-medium transition-all duration-300 text-white">
+                <i class="fas fa-project-diagram mr-2"></i> Our Projects
+            </a>
+            <a href="#members"
+                class="glass-button ripple px-8 py-4 rounded-full font-medium transition-all duration-300 text-white">
+                <i class="fas fa-users mr-2"></i> Our Team
+            </a>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 mb-16 fade-in animation-delay-700">
+            <a href="mailto:contact@echoclub.org"
+                class="glass-button ripple px-6 py-3 rounded-full font-medium flex items-center transition-all duration-300 text-white">
+                <i class="fas fa-envelope mr-2"></i> Contact
+            </a>
+            <a href="https://linkedin.com" target="_blank"
+                class="glass-button ripple px-6 py-3 rounded-full font-medium flex items-center transition-all duration-300 text-white">
+                <i class="fab fa-linkedin mr-2"></i> LinkedIn
+            </a>
+            <a href="https://instagram.com" target="_blank"
+                class="glass-button ripple px-6 py-3 rounded-full font-medium flex items-center transition-all duration-300 text-white">
+                <i class="fab fa-instagram mr-2"></i> Instagram
+            </a>
+            <a href="blogs.html" target="_blank"
+                class="glass-button ripple px-6 py-3 rounded-full font-medium flex items-center transition-all duration-300 text-white">
+                <i class="fas fa-blog mr-2"></i> Blogs
+            </a>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl opacity-70"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 px-4 max-w-6xl mx-auto" id="about">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-6">About ECHO</h2>
+            <div class="relative inline-block">
+                <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed relative z-10">
+                    "ECHO is a student-driven initiative fostering awareness, positivity, and action. Our goal is to
+                    spread optimism and drive change in communities by uniting voices and building solutions."
+                </p>
+                <!-- Animated decoration elements -->
+                <div class="absolute -top-6 -left-6 w-12 h-12 rounded-full bg-blue-100 opacity-70 animate-pulse"></div>
+                <div
+                    class="absolute -bottom-6 -right-6 w-16 h-16 rounded-full bg-cyan-100 opacity-70 animate-pulse animation-delay-1000">
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated icons -->
+        <div class="flex justify-center gap-12 flex-wrap">
+            <div class="text-center fade-in animation-delay-300">
+                <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 ripple">
+                    <i class="fas fa-water text-3xl text-blue-500"></i>
+                </div>
+                <p class="text-gray-600">Spreading like ripples</p>
+            </div>
+            <div class="text-center fade-in animation-delay-500">
+                <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 ripple">
+                    <i class="fas fa-seedling text-3xl text-green-500"></i>
+                </div>
+                <p class="text-gray-600">Growing like leaves</p>
+            </div>
+            <div class="text-center fade-in animation-delay-700">
+                <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 ripple">
+                    <i class="fas fa-sun text-3xl text-yellow-500"></i>
+                </div>
+                <p class="text-gray-600">Shining like light</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder's Voice Section -->
+    <section class="py-20 px-4 founder-quote">
+        <div class="max-w-4xl mx-auto text-center relative">
+            <div class="quote-mark left">"</div>
+            <div class="quote-mark right">"</div>
+
+            <div class="fade-in mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Founder's Voice</h2>
+            </div>
+
+            <div class="fade-in animation-delay-300">
+                <blockquote class="text-2xl md:text-3xl font-medium text-gray-700 mb-8 leading-relaxed relative z-10">
+                    Every small action creates ripples of change. ECHO began as a simple idea - that young voices united
+                    by hope and optimism can transform communities. We believe in the power of collective action and the
+                    magic that happens when passion meets purpose.
+                </blockquote>
+            </div>
+
+            <div class="fade-in animation-delay-600 flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="flex items-center">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 p-1 mr-4">
+                        <div
+                            class="bg-white rounded-full p-1 h-full w-full flex items-center justify-center overflow-hidden">
+                            <img src="shreya.png" alt="Shreya Kadayat" class="rounded-full h-full w-full object-cover">
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <div class="font-bold text-gray-800 text-lg">Shreya Kadayat</div>
+                        <div class="text-blue-600 font-medium">Founder</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-16 fade-in">Our Core Values</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Growth -->
+                <div
+                    class="value-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 hover:border-b-4 hover:border-green-400 fade-in">
+                    <div class="text-4xl mb-4 text-green-500">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Growth</h3>
+                    <p class="text-gray-600">We believe in continuous personal and collective development.</p>
+                </div>
+
+                <!-- Optimism -->
+                <div
+                    class="value-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 hover:border-b-4 hover:border-yellow-400 fade-in animation-delay-200">
+                    <div class="text-4xl mb-4 text-yellow-500">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Optimism</h3>
+                    <p class="text-gray-600">Positive change begins with a hopeful perspective.</p>
+                </div>
+
+                <!-- Community -->
+                <div
+                    class="value-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 hover:border-b-4 hover:border-blue-400 fade-in animation-delay-400">
+                    <div class="text-4xl mb-4 text-blue-500">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Community</h3>
+                    <p class="text-gray-600">Together, we're stronger and can create greater impact.</p>
+                </div>
+
+                <!-- Innovation -->
+                <div
+                    class="value-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 hover:border-b-4 hover:border-purple-400 fade-in animation-delay-600">
+                    <div class="text-4xl mb-4 text-purple-500">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Innovation</h3>
+                    <p class="text-gray-600">Creative solutions drive meaningful progress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Projects Section -->
+    <section class="py-20 px-4 bg-white" id="projects">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">Upcoming Projects</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">We're planning exciting initiatives to make a
+                    positive impact. Here's what we're working on for the future.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl fade-in border-l-4 border-blue-500">
+                    <div
+                        class="h-48 bg-gradient-to-r from-blue-400 to-cyan-400 flex items-center justify-center relative">
+                        <i class="fas fa-hands-helping text-6xl text-white opacity-80"></i>
+                        <div
+                            class="absolute top-4 right-4 bg-white bg-opacity-20 px-3 py-1 rounded-full text-white text-sm font-medium">
+                            Coming Soon
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">..</h3>
+                        <p class="text-gray-600 mb-4">....</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">..</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">..</span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-calendar-alt mr-2"></i>Launch: after May 2026
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl fade-in animation-delay-200 border-l-4 border-purple-500">
+                    <div
+                        class="h-48 bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center relative">
+                        <i class="fas fa-brain text-6xl text-white opacity-80"></i>
+                        <div
+                            class="absolute top-4 right-4 bg-white bg-opacity-20 px-3 py-1 rounded-full text-white text-sm font-medium">
+                            In Planning
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">..</h3>
+                        <p class="text-gray-600 mb-4">.........</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">..</span>
+                            <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">..</span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-calendar-alt mr-2"></i>Launch: After May 2026
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl fade-in animation-delay-400 border-l-4 border-green-500">
+                    <div
+                        class="h-48 bg-gradient-to-r from-green-400 to-teal-400 flex items-center justify-center relative">
+                        <i class="fas fa-leaf text-6xl text-white opacity-80"></i>
+                        <div
+                            class="absolute top-4 right-4 bg-white bg-opacity-20 px-3 py-1 rounded-full text-white text-sm font-medium">
+                            Concept Stage
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">...</h3>
+                        <p class="text-gray-600 mb-4">...........</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">..</span>
+                            <span class="px-3 py-1 bg-teal-100 text-teal-600 rounded-full text-sm">..</span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-calendar-alt mr-2"></i>Launch: After May 2026
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 fade-in animation-delay-600">
+                <p class="text-gray-600 mb-6">Want to contribute ideas or volunteer for these upcoming projects?</p>
+                <a href="mailto:contact@echoclub.org"
+                    class="glass-button inline-block px-8 py-3 bg-blue-500 text-white rounded-full font-medium glow-hover transition-all duration-300">
+                    <i class="fas fa-hands-helping mr-2"></i> Get Involved
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Members Section -->
+    <section class="py-20 px-4 bg-gray-50" id="members">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-16 fade-in">Meet The Founding Members
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Member 1 -->
+                <div class="text-center fade-in">
+                    <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 p-1">
+                        <div
+                            class="bg-white rounded-full p-1 h-full w-full flex items-center justify-center overflow-hidden">
+                            <img src="shreya.png" alt="Shreya Kadayat" class="rounded-full h-full w-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Shreya Kadayat</h3>
+                    <p class="text-blue-500 mb-2">Founder</p>
+                    <p class="text-gray-600 text-sm">...</p>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="text-center fade-in animation-delay-200">
+                    <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
+                        <div
+                            class="bg-white rounded-full p-1 h-full w-full flex items-center justify-center overflow-hidden">
+                            <img src="prasiddha.png" alt="Prasiddha Mainali"
+                                class="rounded-full h-full w-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Prasiddha Mainali</h3>
+                    <p class="text-purple-500 mb-2">Co-Founder</p>
+                    <p class="text-gray-600 text-sm">...</p>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="text-center fade-in animation-delay-400">
+                    <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-r from-green-400 to-teal-400 p-1">
+                        <div
+                            class="bg-white rounded-full p-1 h-full w-full flex items-center justify-center overflow-hidden">
+                            <img src="bipin.jpeg" alt="Bipin Bhattarai" class="rounded-full h-full w-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Bipin Bhattarai</h3>
+                    <p class="text-green-500 mb-2">Co-Founder</p>
+                    <p class="text-gray-600 text-sm">...</p>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="text-center fade-in animation-delay-600">
+                    <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 p-1">
+                        <div
+                            class="bg-white rounded-full p-1 h-full w-full flex items-center justify-center overflow-hidden">
+                            <img src="Sarthak.jpeg" alt="Sarthak Gajurel"
+                                class="rounded-full h-full w-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Sarthak Gajurel</h3>
+                    <p class="text-yellow-500 mb-2">Co-Founder</p>
+                    <p class="text-gray-600 text-sm">...</p>
+                </div>
+
+                <div class="text-center fade-in animation-delay-600">
+                    <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 p-1">
+                        <div
+                            class="bg-white rounded-full p-1 h-full w-full flex items-center justify-center overflow-hidden">
+                            <img src="Sampada.jpg" alt="Sampada Oli" class="rounded-full h-full w-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Sampada Oli</h3>
+                    <p class="text-yellow-500 mb-2">Co-Founder</p>
+                    <p class="text-gray-600 text-sm">...</p>
+                </div>
+                <div class="text-center fade-in animation-delay-600">
+                    <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 p-1">
+                        <div
+                            class="bg-white rounded-full p-1 h-full w-full flex items-center justify-center overflow-hidden">
+                            <img src="Shitoshna.jpg" alt="Shitoshna Timsina"
+                                class="rounded-full h-full w-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Shitoshna Timsina</h3>
+                    <p class="text-yellow-500 mb-2">Co-Founder</p>
+                    <p class="text-gray-600 text-sm">...</p>
+                </div>
+                <!-- Member 5 -->
+                <div class="text-center fade-in animation-delay-600">
+                    <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 p-1">
+                        <div
+                            class="bg-white rounded-full p-1 h-full w-full flex items-center justify-center overflow-hidden">
+                            <img src="diggya.png" alt="Diggya Sharma" class="rounded-full h-full w-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Diggya Sharma</h3>
+                    <p class="text-yellow-500 mb-2">Co-Founder</p>
+                    <p class="text-gray-600 text-sm">...</p>
+                </div>
+                <!-- Member 6 -->
+                <div class="text-center fade-in animation-delay-600">
+                    <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 p-1">
+                        <div
+                            class="bg-white rounded-full p-1 h-full w-full flex items-center justify-center overflow-hidden">
+                            <img src="kripesh.png" alt="Kripesh Raj Sharma"
+                                class="rounded-full h-full w-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Kripesh Raj Sharma</h3>
+                    <p class="text-yellow-500 mb-2">Co-Founder</p>
+                    <p class="text-gray-600 text-sm">...</p>
+                </div>
+
+                <!-- Member 7 -->
+            </div>
+
+        </div>
+
+        <!-- Blogs Section Addition -->
+        <div class="text-center mt-16 fade-in">
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
+                <div class="mb-6">
+                    <i class="fas fa-blog text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Stay Updated with Our Blogs</h3>
+                    <p class="text-gray-600">Get insights from our team members, read about our journey, and
+                        discover inspiring stories from our community.</p>
+                </div>
+                <a href="blogs.html" target="_blank"
+                    class="inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full font-medium glow-hover transition-all duration-300">
+                    <i class="fas fa-arrow-right mr-2"></i> Read Our Blogs
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section class="py-20 px-4 max-w-6xl mx-auto" id="connect">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-16 fade-in">Connect With Us</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Instagram -->
+            <div
+                class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl fade-in">
+                <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-3"></div>
+                <div class="p-8 text-center">
+                    <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fab fa-instagram text-3xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Instagram</h3>
+                    <p class="text-gray-600 mb-6">Follow us for updates and inspiration</p>
+                    <a href="https://instagram.com" target="_blank"
+                        class="neon-glow inline-block px-6 py-2 bg-pink-500 text-white rounded-full font-medium transition-all duration-300">
+                        Follow @echo
+                    </a>
+                </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div
+                class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl fade-in animation-delay-200">
+                <div class="bg-gradient-to-r from-blue-600 to-blue-400 h-3"></div>
+                <div class="p-8 text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fab fa-linkedin text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">LinkedIn</h3>
+                    <p class="text-gray-600 mb-6">Connect professionally and see our initiatives</p>
+                    <a href="https://linkedin.com" target="_blank"
+                        class="neon-glow inline-block px-6 py-2 bg-blue-500 text-white rounded-full font-medium transition-all duration-300">
+                        Connect
+                    </a>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div
+                class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl fade-in animation-delay-400">
+                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-3"></div>
+                <div class="p-8 text-center">
+                    <div class="w-20 h-20 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-envelope text-3xl text-cyan-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Email</h3>
+                    <p class="text-gray-600 mb-6">Reach out for collaborations or questions</p>
+                    <a href="mailto:contact@echoclub.org"
+                        class="neon-glow inline-block px-6 py-2 bg-cyan-500 text-white rounded-full font-medium transition-all duration-300">
+                        Write to us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div>
+                            <img src="image.png" alt="ECHO Logo" class="w-32 h-32 object-contain" />
+                        </div>
+                        <h3 class="text-xl font-bold">Empowering Change through Hope and Optimism</h3>
+                    </div>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://instagram.com" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="mailto:contact@echoclub.org"
+                        class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="blogs.html" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-blog text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>Made with <i class="fas fa-heart text-red-400"></i> by ECHO Team</p>
+                <p class="mt-2 text-sm">© 2025 ECHO Initiative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced scroll effects and parallax
+        let ticking = false;
+
+        function updateParallax() {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax-element');
+
+            parallaxElements.forEach(element => {
+                const speed = element.dataset.speed || 0.5;
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+
+            ticking = false;
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add scroll listener for parallax
+            window.addEventListener('scroll', requestTick, { passive: true });
+
+            // Observe all fade-in elements
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => observer.observe(element));
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const navHeight = document.querySelector('nav').offsetHeight;
+                        const targetPosition = target.offsetTop - navHeight - 20;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Enhanced ripple effect
+            document.querySelectorAll('.ripple').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.classList.add('ripple-effect');
+
+                    this.appendChild(ripple);
+
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            // Navigation background on scroll
+            const nav = document.querySelector('nav');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 100) {
+                    nav.classList.add('bg-white/90');
+                    nav.classList.remove('bg-white/80');
+                } else {
+                    nav.classList.add('bg-white/80');
+                    nav.classList.remove('bg-white/90');
+                }
+            });
+        });
+
+        // Add CSS for ripple effect
+        const style = document.createElement('style');
+        style.textContent = `
+            .ripple-effect {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.6);
+                transform: scale(0);
+                animation: ripple-animation 0.6s linear;
+                pointer-events: none;
+            }
+            
+            @keyframes ripple-animation {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+
+</html>
